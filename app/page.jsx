@@ -8,6 +8,9 @@ const page = () => {
   return (
     <>
       <SetupNiceToaster settings={{ theme }} />
+      <br />
+      <br /><br /><br />
+      <br /><br /><br /><br /><br />
       <button onClick={notify}>Click me</button>
       <button onClick={() => { setTheme("light") }}>light</button>
       <button onClick={() => { setTheme("dark") }}>dark</button>
