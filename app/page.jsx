@@ -133,6 +133,7 @@ const page = () => {
                 <button className={template === 'fuzzy' ? 'active' : 'inactive'} onClick={() => setTemplate('fuzzy')}>Fuzzy</button>
                 <button className={template === 'cyber' ? 'active' : 'inactive'} onClick={() => setTemplate('cyber')}>Cyber</button>
                 <button className={template === 'classic' ? 'active' : 'inactive'} onClick={() => setTemplate('classic')}>Classic</button>
+                <button className={template === 'pretty' ? 'active' : 'inactive'} onClick={() => setTemplate('pretty')}>Pretty</button>
               </div>
             </div>
             <div className="bblock">
