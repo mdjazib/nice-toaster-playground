@@ -18,6 +18,7 @@ const page = () => {
   const [theme, setTheme] = useState('light');
   const [template, setTemplate] = useState('default');
   const [position, setPosition] = useState('top-center');
+  const [reverseOrder, setReverseOrder] = useState(true);
 
   const playgroundTheme = {
     light: {
@@ -48,11 +49,13 @@ const page = () => {
       <SetupNiceToaster settings={{
         theme,
         position,
-        template
+        template,
+        reverseOrder
       }} />
       <div className="heading">
         <h3>Playground</h3>
         <h2>Nice Toaster</h2>
+        <a href="https://www.npmjs.com/package/nice-toaster" target="_blank" rel="noopener noreferrer" >Install this pkg from NPM</a>
       </div>
       <div className="playground">
         <div className="col">
@@ -115,7 +118,7 @@ const page = () => {
           </div>
           <div className="toaster-settings-ui-panel block-constant">
             <CodeBlock
-              text={`<SetupNiceToaster settings={{\n        theme: "${theme}",\n        position: "${position}",\n        template: "${template}"\n}} />`}
+              text={`<SetupNiceToaster settings={{\n        theme: "${theme}",\n        position: "${position}",\n        template: "${template}",\n        reverseOrder: ${reverseOrder}\n}} />`}
               language={"jsx"}
               theme={theme === "dark" ? ocean : atomOneLight}
             />
@@ -145,6 +148,13 @@ const page = () => {
                 <button className={position === 'bottom-center' ? 'active' : 'inactive'} onClick={() => setPosition('bottom-center')}>Bottom Center</button>
                 <button className={position === 'bottom-right' ? 'active' : 'inactive'} onClick={() => setPosition('bottom-right')}>Bottom Right</button>
                 <button className={position === 'bottom-left' ? 'active' : 'inactive'} onClick={() => setPosition('bottom-left')}>Bottom Left</button>
+              </div>
+            </div>
+            <div className="bblock">
+              <p>Order</p>
+              <div className="ctagrp">
+                <button className={reverseOrder ? 'active' : 'inactive'} onClick={() => setReverseOrder(true)}>Newest on Top</button>
+                <button className={!reverseOrder ? 'active' : 'inactive'} onClick={() => setReverseOrder(false)}>Newest on Bottom</button>
               </div>
             </div>
           </div>

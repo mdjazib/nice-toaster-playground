@@ -27,6 +27,8 @@ $btn-bg: var(--btn-bg)
         font-family: $manrope
     .heading
         text-align: center
+        @include flex(center,center,column,10px)
+        margin-bottom: 10px !important
         h3
             font-family: $sacramento
             font-size: clamp(20px,3vw,40px)
@@ -34,6 +36,14 @@ $btn-bg: var(--btn-bg)
         h2
             font-size: clamp(24px,3vw,60px)
             color: $text
+        a
+            cursor: pointer
+            text-decoration: none
+            background-color: #11acff
+            font-weight: 600
+            color: $background
+            padding: 6px 18px
+            border-radius: 5px
     .playground
         @include flex(flex-start,flex-start,row,10px)
         width: 100%

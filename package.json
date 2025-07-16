@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "next": "15.3.5",
-    "nice-toaster": "^6.3.3",
+    "nice-toaster": "^6.5.1",
     "react": "^19.0.0",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^19.0.0",
